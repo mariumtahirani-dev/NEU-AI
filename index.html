@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NEU AI Job Portal – Find engineering, architecture, mobile repair & driving jobs instantly." />
+  <title>NEU AI – Job Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="assets/logo.png" alt="NEU AI Logo" class="navbar-logo" />
+      <span class="navbar-title">NEU AI</span>
+    </div>
+    <div class="navbar-search">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search jobs, companies, locations..." />
+    </div>
+    <div class="navbar-stats">
+      <div class="stat-pill"><span class="stat-num" id="totalJobs">0</span> Jobs</div>
+      <div class="stat-pill"><span class="stat-num" id="totalCategories">4</span> Categories</div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <img src="assets/logo.png" alt="NEU AI Logo" class="hero-logo" />
+      <h1 class="hero-title">Find Your <span class="gradient-text">Dream Job</span></h1>
+      <p class="hero-subtitle">Powered by NEU AI – Intelligence for Tomorrow</p>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="categories-section" id="categoriesSection">
+    <h2 class="section-heading">Browse by Category</h2>
+    <div class="categories-grid">
+      <button class="category-card active" data-category="all">
+        <div class="cat-icon">🌐</div>
+        <div class="cat-name">All Jobs</div>
+        <div class="cat-count" id="count-all">0</div>
+      </button>
+      <button class="category-card" data-category="Engineering">
+        <div class="cat-icon">⚙️</div>
+        <div class="cat-name">Engineering</div>
+        <div class="cat-count" id="count-Engineering">0</div>
+      </button>
+      <button class="category-card" data-category="Architecture">
+        <div class="cat-icon">🏛️</div>
+        <div class="cat-name">Architecture</div>
+        <div class="cat-count" id="count-Architecture">0</div>
+      </button>
+      <button class="category-card" data-category="Mobile Repairing">
+        <div class="cat-icon">📱</div>
+        <div class="cat-name">Mobile Repairing</div>
+        <div class="cat-count" id="count-Mobile Repairing">0</div>
+      </button>
+      <button class="category-card" data-category="Driving">
+        <div class="cat-icon">🚗</div>
+        <div class="cat-name">Driving</div>
+        <div class="cat-count" id="count-Driving">0</div>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ JOBS LIST ============ -->
+  <section class="jobs-section">
+    <div class="jobs-header">
+      <h2 class="section-heading" id="jobsHeading">All Jobs</h2>
+      <span class="results-count" id="resultsCount"></span>
+    </div>
+    <div class="jobs-grid" id="jobsGrid">
+      <!-- Cards injected by JS -->
+    </div>
+    <div class="no-results hidden" id="noResults">
+      <div class="no-results-icon">🔍</div>
+      <p>No jobs found matching your search.</p>
+    </div>
+  </section>
+
+  <!-- ============ JOB DETAIL MODAL ============ -->
+  <div class="modal-overlay hidden" id="modalOverlay">
+    <div class="modal" id="jobModal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-company" id="modalCompany"></div>
+      <div class="modal-tags" id="modalTags"></div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <button class="modal-apply-btn" id="modalApply">Apply Now</button>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="NEU AI" class="footer-logo" />
+      <span>NEU AI – Intelligence for Tomorrow</span>
+    </div>
+    <p>&copy; 2026 NEU AI Job Portal. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
